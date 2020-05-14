@@ -15,7 +15,6 @@ module.exports = function (app, db) {
       endDate,
     } = req.body; // REQUESTING THESE DATA FROM THE FRONTEND
     const pageNumber = parseInt(req.query.pageNumber);
-    const limitPerPage = parseInt(req.query.limitPerPage);
     const filter = db.collection(PRODUCTDATA); // SELECTING THE COLLECTION
     let query = {}; // CREATING AN EMPTY QUERY OBJECT FOR PASSING THE COMBINATION OF FILTERS BASED ON USER
     if (
