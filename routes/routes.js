@@ -13,7 +13,7 @@ module.exports = function (app, db) {
       stockAvailability,
       startDate,
       endDate,
-    } = req.body; // REQUESTING THESE DATA FROM THE FRONTEND
+    } = req.body.body; // REQUESTING THESE DATA FROM THE FRONTEND
     const pageNumber = parseInt(req.query.pageNumber);
     const filter = db.collection(PRODUCTDATA); // SELECTING THE COLLECTION
     let query = {}; // CREATING AN EMPTY QUERY OBJECT FOR PASSING THE COMBINATION OF FILTERS BASED ON USER
